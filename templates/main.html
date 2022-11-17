@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KCFXVZ93Y6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KCFXVZ93Y6');
+</script>
+<title>抽卡模擬器</title>
+<meta name="description" content="draw pcs!">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/68144b1df7.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+  <a href='/' ><img class="banner" src="{{ url_for('static', filename='banner.jpg') }}"></img></a>
+
+
+<div class="holder">
+  <div class="news">請點擊下方連結查看公告！</div>
+</div>
+
+<div class="content">
+  <form method="post">
+    <div>
+      <label for="n">專輯:</label>
+    </div>
+    <div>
+      <select id="n" name="n">
+        <option value=0>NCT127 - STICKER sticky ver. (1 out of 9)</option>
+        <option value=1>NCT127 - STICKER sticker ver. (1 out of 9)</option>
+        <option value=2>NCT DREAM - Hello Future hello ver. (1 out of 7)</option>
+        <option value=3>NCT DREAM - Hello Future future ver. (1 out of 7)</option>
+        <option value=4>WayV - Kick Back stranger ver. (1 out of 6)</option>
+        <option value=5>WayV - Kick Back hitchhiker ver. (1 out of 6)</option>
+        <option value=6>ATEEZ - The World EP.1: Movement diary ver. (2 out of 16)</option>
+        <option value=7>PURPLE K!SS - HIDE & SEEK hide ver. (2 out of 14)</option>
+        <option value=8>(G)I-DLE - I LOVE jewel case ver. (3 out of 15)</option>
+        <option value=9>IVE - ELEVEN ver. 1 (1 out of 6)</option>
+        <option value=10>IVE - ELEVEN ver. 2 (1 out of 6)</option>
+        <option value=11>LOONA - [X X] Limited B ver. (2 out of 18)</option>
+        <option value=12>TXT - minisode 1: Blue Hour
+        <option value=13>SEVENTEEN - Attacca Op. 1 (2 out of 26)</option>
+        <option value=14>MAMAMOO - MIC ON main ver. (2 out of 16)</option>
+        <option value=15>Kep1er - DOUBLAST! Blue Blast jewel case ver. (2 out of 18)</option>
+        <option value=16>TWICE - Taste of Love Fallen ver. (2 out of 18)</option>
+        <option value=17>Stray Kids - MAXIDENT T-Crush ver. (1 out of 8)</option>
+        <option value=18>BTS - Love Yourself 轉 'Tear' U ver. (1 out of 7)</option>
+        <option value=19>Weeekly - Play Game: Holiday M ver. (2 out of 14)</option>
+        <option value=20>LE SSERAFIM - ANTIFRAGILE (1 out of 15)</option>
+        <option value=21>ONEUS - BLOOD MOON Grey ver. (2 out of 10)</option>
+        <option value=22>ITZY - CRAZY IN LOVE (2 out of 30)</option>
+        <option value=23>ENHYPEN - Border: Day One (2 out of 21)</option>
+        <option value=24>LOONA - [12:00] B ver. (3 out of 33)</option>
+        <option value=25>Red Velvet - Queendom queens ver. (1 out of 10)</option>
+        <option value=26>VICTON - 6th Anniversary MD (1 out of 10)</option>
+        <option value=27>NCT 2020 - RESONANCE Pt. 2 Kihno Album Departure ver. (1 out of 22)</option>
+        <option value=28>ASTRO - Drive to the Starry Road Road ver. (2 out of 24)</option>
+        <option value=29>TXT  - THE CHAOS CHAPTER : FIGHT OR ESCAPE Fight ver. (1 out of 5)</option>
+        <option value=30>TXT  - THE CHAOS CHAPTER : FIGHT OR ESCAPE Escape ver. (1 out of 5)</option>
+      </select>
+    </div>
+  <div>
+    <input type="submit" value="抽卡!">
+  </div>
+  </form>
+
+  {% for i in pcs %}
+  <img class="pc" src="{{ i }}"></img>
+  {% endfor %} 
+</div>
+
+
+<footer>
+	<a href="https://github.com/Q23RF/DrawMyTime" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://twitter.com/INTO105202145?s=20&t=EzQZGuU6BlGluj3jHYzAjg" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+	<a href="https://www.instagram.com/man9oz21/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="/feedback">許願池</a>
+    <a href="https://hackmd.io/@gBTyCODBRneIN12giDxbfQ/HJESj-48i" target="_blank">公告</a>
+</footer>
+</body>
+</html>
